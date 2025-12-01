@@ -54,6 +54,10 @@ classify.py # Sentiment classification via LM scoring
 utils.py # Helper utilities
 config.yaml # Training configuration
 
+## Pretrained Model Download
+
+A pretrained `model.pt` is stored on Google Drive. Download it from [this link](https://drive.google.com/file/d/1nsPh-3on64wuNQJ6Z2nMNaEvjB4NQFdV/view?usp=sharing) and place it in the project root (next to `generate.py`, `classify.py`, etc.). Paths below assume the weights are saved as `model.pt`.
+
 ## How to Train
 
 ```bash
@@ -71,13 +75,13 @@ log loss and perplexity,
 
 save model.pt.
 
-How to Generate Text
+## How to Generate Text
 ```bash
 python generate.py --model model.pt --prompts prefixs.json
 ```
 Outputs generated text using temperature sampling.
 
-How to Run Sentiment Classification
+## How to Run Sentiment Classification
 ```bash
 python classify.py --model model.pt --input yelp_test.txt
 ```
